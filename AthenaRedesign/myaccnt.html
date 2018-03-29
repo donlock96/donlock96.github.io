@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Athena</title>
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div class="header">
+		<a class="title" href="home.html">Athena</a>
+		<div class="acc_icon" onclick="openmenu()"></div>
+	</div>
+	<div class="drop-menu">
+		<ul>
+			<li><a href="myaccnt.html">My Account</li></a>
+			<li><a href="CAS/login.html">Logout</a></li>
+		</ul>
+	</div>
+    
+	<div class="center">
+		<div id = "accnt">
+			<div class="stud-icon"></div>
+			<h3><b>Name:</b> John Doe</h3>
+			<h3><b>Phone:</b> <span>340-123-4596</span></h3>
+			
+			<h3><b>Addresses:</b> </h3>
+
+			<table>
+				<tr>
+					<th>Current Address</th>
+					<th>Permanent Address</th>
+					<th>Student Account Address</th>
+				</tr>
+				<tr>
+					<td>
+						140 Cedar St, Athens, GA 30602 <br> United States
+					</td>
+					<td>
+						140 Cedar St, Athens, GA 30602 <br> United States
+					</td>
+					<td>
+						140 Cedar St, Athens, GA 30602 <br> United States
+					</td>
+				</tr>
+			</table>
+
+			<h3><b>Emergency Contacts: </b></h3>
+			<table>
+				<tr>
+					<th>Order</th>
+					<th>Name</th>
+					<th>Address and Phone</th>
+					<th>Relationship</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Jane Doe</td>
+					<td>140 Cedar St, Athens, GA 30602 United States</td>
+					<td>Mother</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Joe Doe</td>
+					<td>140 Cedar St, Athens, GA 30602 United States</td>
+					<td>Father</td>
+				</tr>
+			</table>
+			<a class="homeButton" onclick="showEdit()">Edit</a>
+		</div>
+		<div id = "edit-accnt">
+			<div class="stud-icon"></div>
+			<h3 onclick="showName()"><b>Name: </b> <input type="text" name="number" value="John Doe" disabled></h3>
+			
+			<h3><b>Phone:</b> <input type="text" name="number" value="340-123-4596"></h3>
+			
+			<h3><b>Addresses:</b> </h3>
+
+			<table>
+				<tr>
+					<th>Current Address</th>
+					<th>Permanent Address</th>
+					<th>Student Account Address</th>
+				</tr>
+				<tr>
+					<td>
+						<textarea>140 Cedar St, Athens, GA 30602 United States</textarea>
+					</td>
+					<td>
+						<textarea>140 Cedar St, Athens, GA 30602 United States</textarea>
+					</td>
+					<td>
+						<textarea>140 Cedar St, Athens, GA 30602 United States</textarea>
+					</td>
+				</tr>
+			</table>
+
+			<h3><b>Emergency Contacts: </b></h3>
+			<table>
+				<tr>
+					<th>Order</th>
+					<th>Name</th>
+					<th>Address and Phone</th>
+					<th>Relationship</th>
+				</tr>
+				<tr>
+					<td>
+						<select>
+        					<option selected>1</option>
+       					 	<option>2</option>
+     					</select>
+  					</td>
+					<td><input type="text" name="name1" value="Jane Doe"></td>
+					<td><textarea>140 Cedar St, Athens, GA 30602 United States</textarea></td>
+					<td>
+						<select>
+        					<option selected>Mother</option>
+       					 	<option>Father</option>
+       					 	<option>Not Applicable</option>
+       					 	<option>Guardian</option>
+       					 	<option>Other</option>
+     					</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select>
+        					<option>1</option>
+       					 	<option selected>2</option>
+     					</select>
+					</td>
+					<td><input type="text" name="name2" value="Joe Doe"></td>
+					<td><textarea>140 Cedar St, Athens, GA 30602 United States</textarea></td>
+					<td>
+						<select>
+        					<option>Mother</option>
+       					 	<option selected>Father</option>
+       					 	<option>Not Applicable</option>
+       					 	<option>Guardian</option>
+       					 	<option>Other</option>
+     					</select>
+					</td>
+				</tr>
+			</table>
+			<a class="homeButton" onclick="saveEdit()">Save</a>
+		</div>
+		</div>
+	</div>
+
+</body>
+<script src="script.js"></script>
+<script src="headerscript.js"></script>
+</html>
