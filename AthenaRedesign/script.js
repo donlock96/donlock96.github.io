@@ -8,8 +8,6 @@ function enablePrefix() {
 }
 
 function enableCourse() {
-  console.log(document.getElementById('prefix').value);
-  console.log(document.getElementById('prefix').value == 'CSCI')
 
   if (document.getElementById('prefix').value == 'CSCI') {
     document.getElementById('course').disabled = false;
@@ -17,6 +15,15 @@ function enableCourse() {
   else {
     document.getElementById('course').disabled = true;
     document.getElementById('course').value = 'default';
+  }
+}
+
+function showClasses() {
+  if (document.getElementById('course').value == '1100') {
+    document.getElementById("add-class-image").style.display = "block";
+  }
+  else {
+    document.getElementById("add-class-image").style.display = "none";
   }
 }
 
@@ -49,16 +56,13 @@ window.onclick = function(event) {
 function dropCourse() {
 	modal.style.display="none";
 	var row = document.getElementById("myRow");
-	row.deleteCell(3);
-	row.deleteCell(3);
-	row.deleteCell(3);
-	row.insertCell(3);
-	row.insertCell(3);
-	row.insertCell(3);
+  row.deleteCell(3);
+  row.deleteCell(3);
+  row.deleteCell(3);
+  row.insertCell(3);
+  row.insertCell(3);
+  row.insertCell(3);
 }
-
-
-//Will come back to these.
 
 function showEdit(){
   document.getElementById("accnt").style.display = "none";
@@ -72,9 +76,9 @@ function saveEdit(){
 
 function showName() {
     alert("A request to change your name in the University Administrative"
-      + " System must be submitted to the Office of the Registrar." 
-      +" If you need to make changes to your name, you will need" 
-      +" to present the appropriate documentation to the Office of the Registrar." 
-      +" Different types of name changes require different types of legal documentation." 
+      + " System must be submitted to the Office of the Registrar."
+      +" If you need to make changes to your name, you will need"
+      +" to present the appropriate documentation to the Office of the Registrar."
+      +" Different types of name changes require different types of legal documentation."
       +" You must complete, sign and submit the Change of Name form.");
 }

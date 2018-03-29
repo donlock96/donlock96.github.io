@@ -5,14 +5,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <div class="header">
-      <a class="title" href="home.html">Athena</a>
-      <div class="acc_icon" onclick="openmenu()"></div>
+    <div class="header">
+      <a href="home.html"><h1 class="title">Athena</h1></a>
+      <a class="sign-in" id="menu">my account</a>
     </div>
-    <div class="drop-menu">
+
+    <div class="drop-menu" id="drop-down-menu">
       <ul>
-        <li><a href="myaccnt.html">My Account</li></a>
-		<li><a href="CAS/login.html">Logout</a></li>
+        <li><a href="myaccnt.html">Personal Information</li></a>
+        <li><a href="index.html">Logout</a></li>
       </ul>
     </div>
 
@@ -268,9 +269,9 @@
         <option value="YORB">YORB - Yoruba</option>
         <option value="ZULU">ZULU - Zulu</option>
       </select>
-      <select id="course" disabled>
+      <select id="course" disabled onchange="showClasses()">
         <option value ="default" selected>Select a Course</option>
-        <option>1100	Topics in Computing</option>
+        <option value="1100">1100	Topics in Computing</option>
         <option>1100L	Topics in Computing Lab</option>
         <option>1210	Comp Modeling and Sci</option>
         <option>1301	Intro Programming</option>
@@ -336,6 +337,8 @@
       </select>
     </div>
 
+    <img id="add-class-image" class="add-class-image" src="addaclass.png"/>
+
     <h2 class="schedule">My Schedule</h2>
     <table>
       <tr><th></th><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THUR</th><th>FRI</th><th>SAT</th></tr>
@@ -368,7 +371,7 @@
           <p><strong>Grade Mode:</strong> Standard</p>
           <p><strong>Level:</strong> Undergraduate</p>
           <p><strong>Campus:</strong> Athens</p>
-		  <p><button class="dropButton" onClick="dropCourse()">Drop Course</button></p>
+          <p><button class="dropButton" onClick="dropCourse()">Drop Course</button></p>
         </div>
         <div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.7149560655457!2d-83.3762594347039!3d33.948458730639366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f66ce149717b95%3A0x7497c092fd4d3f0!2sChemistry+Building%2C+Athens%2C+GA+30602!5e0!3m2!1sen!2sus!4v1522011930168" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -378,5 +381,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="headerscript.js"></script>
+    <script src="drop.js"></script>
   </body>

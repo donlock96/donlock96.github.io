@@ -6,29 +6,30 @@
   </head>
   <body>
     <div class="header">
-      <a class="title" href="home.html">Athena</a>
-      <div class="acc_icon" onclick="openmenu()"></div>
+      <h1 class="title">Athena</h1>
+      <a class="sign-in" id="menu">my account</a>
     </div>
-    <div class="drop-menu">
-        <ul>
-          <li><a href="myaccnt.html">My Account</li></a>
-		  <li><a href="CAS/login.html">Logout</a></li>
-        </ul>
-      </div>
+
+    <div class="drop-menu" id="drop-down-menu">
+      <ul>
+        <li><a href="myaccnt.html">Personal Information</li></a>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
 
     <div class="flex">
 
       <div class="flex-item">
     		<a href="registration.html" class="homeButton">Registration</a>
     		<a href="https://tnet.studentacct.uga.edu/C27063_tsa/web/login.jsp" class="homeButton">Student Finances</a>
-    		<a href="studrecord.html" class="homeButton">Student Records</a>
+    		<a href="unfinished.html" class="homeButton">Student Records</a>
       </div>
 
       <table class="updates">
           <tr><th class="helpful-links-title">Updates For You</th></tr>
           <tr><td class="helpful-links-content">
             <ul>
-              <li class="update-content">You have holds on your account. <br>Click <a class="here" href="">here</a> to clear holds.</li><br>
+              <li class="update-content">You have holds on your account. <br>Click <a class="here" href="unfinished.html">here</a> to clear holds.</li><br>
               <li class="update-content">A spot has opened in CSCI 4800. Click <a class="here" href="registration.html">here</a> to register. </li><br>
             </ul>
           </td></tr>
@@ -47,6 +48,6 @@
         </td></tr>
     </table>
 
+    <script src="drop.js"></script>
   </body>
-  <script src="headerscript.js"></script>
 </html>
