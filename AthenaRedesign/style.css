@@ -312,3 +312,25 @@ input:focus {
   width: 200px;
   height: 25px;
 }
+
+/*Student Record Page*/
+
+.flex-record
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 700px;
+}
+
+.flex-record .flex-item
+{
+  top: 50%;
+  right: 20%;
+  margin-right: 30px;
+  margin-top: 30px;
+  position: relative;
+}
