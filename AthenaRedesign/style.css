@@ -56,6 +56,10 @@ a {
 .helpful-links-title {
   font-size: 25px;
   padding: 5px;
+  background-color: #BA0C2F;
+  color: white;
+  font-weight: normal;
+  text-align: center;
 }
 .helpful-links-content {
   text-align: left;
@@ -97,6 +101,12 @@ li:hover {
 }
 .update-content:hover {
   color: inherit;
+}
+.updates th {
+  background-color: #BA0C2F;
+  text-align: center;
+  color: white;
+  font-weight: normal;
 }
 .flex {
   display: flex;
@@ -160,16 +170,17 @@ table {
   margin: auto;
   border-collapse: collapse;
   border: 1px solid black;
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
 }
 tr {
   border: 1px solid black;
 }
-th {
+#scheduleTable th {
   background-color: #BA0C2F;
   color: white;
   font-weight: normal;
   width: 100px;
+  text-align: center;
 }
 td {
   font-family: sans-serif;
@@ -204,6 +215,34 @@ td {
   display: none;
   margin: auto;
   width: 700px;
+}
+
+.course-table {
+  font-family: sans-serif;
+  text-align: left;
+  margin: 10px;
+  border-collapse: collapse;
+  margin: auto;
+  display: none;
+}
+.course-table th {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+.course-table td, th, tr {
+  text-align: left;
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-color: grey;
+}
+
+#AAEC {
+  display: none;
 }
 
 /* Code for Modal display from W3 Schools*/
@@ -253,7 +292,7 @@ td {
   font-weight: bold;
 }
 
-#myBtn {
+#modal1, #modal2, #modal3 {
   cursor: pointer;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -333,4 +372,9 @@ input:focus {
   margin-right: 30px;
   margin-top: 30px;
   position: relative;
+}
+
+.help {
+  text-align: center;
+  margin-bottom: 100px;
 }

@@ -20,17 +20,16 @@
     <div class="add-a-course-box">
       <h2 class="add-a-course">Add a course</h2>
 
-      <!--<form id="new-course" name="new-course" onchange="">-->
       <select id="term" onchange="enablePrefix()">
         <option selected>Select a Term</option>
         <option value="Sp18">Spring 2018</option>
-        <option>Summer 2018</option>
-        <option>Fall 2018</option>
+        <!--<option>Summer 2018</option>-->
+        <option value="register">Fall 2018</option>
       </select>
       <select id="prefix" disabled onchange="enableCourse()">
         <option selected="selected" value="-1">Select a Prefix</option>
         <option value="AAEC">AAEC - Agricultural and Applied Economics</option>
-        <option value="ACCT">ACCT - Accounting</option>
+        <!--<option value="ACCT">ACCT - Accounting</option>
         <option value="ADPR">ADPR - Advertising and Public Relations</option>
         <option value="ADSC">ADSC - Animal and Dairy Sciences</option>
         <option value="AENG">AENG - Agricultural Engineering</option>
@@ -75,9 +74,9 @@
         <option value="CMLT">CMLT - Comparative Literature</option>
         <option value="CMSD">CMSD - Communication Sciences and Disorders</option>
         <option value="COMM">COMM - Communication Studies</option>
-        <option value="CRSS">CRSS - Crop and Soil Sciences</option>
+        <option value="CRSS">CRSS - Crop and Soil Sciences</option>-->
         <option value="CSCI">CSCI - Computer Science</option>
-        <option value="CSEE">CSEE - Computer Systems Engineering</option>
+        <!--<option value="CSEE">CSEE - Computer Systems Engineering</option>
         <option value="CVLE">CVLE - Civil Engineering</option>
         <option value="DANC">DANC - Dance</option>
         <option value="DIGI">DIGI - Digital Humanities Research and Innovation</option>
@@ -267,11 +266,11 @@
         <option value="WIPP">WIPP - Writing Intensive Program Pedagogy</option>
         <option value="WMST">WMST - Women's Studies</option>
         <option value="YORB">YORB - Yoruba</option>
-        <option value="ZULU">ZULU - Zulu</option>
+        <option value="ZULU">ZULU - Zulu</option>-->
       </select>
-      <select id="course" disabled onchange="showClasses()">
+      <select id="CSCI" disabled onchange="showClasses(this)">
         <option value ="default" selected>Select a Course</option>
-        <option value="1100">1100	Topics in Computing</option>
+        <!--<option value="1100">1100	Topics in Computing</option>
         <option>1100L	Topics in Computing Lab</option>
         <option>1210	Comp Modeling and Sci</option>
         <option>1301	Intro Programming</option>
@@ -282,11 +281,12 @@
         <option>2150	Intro Scientif Comp</option>
         <option>2150L	Lab Scientif Comp</option>
         <option>2610	Discrete Mathematics for CSCI</option>
-        <option>2670	Intro Theory Comput</option>
-        <option>2720	Data Structures</option>
-        <option>3030	Computing, Ethics, and Society</option>
-        <option>3360	Data Science I</option>
-        <option>4050	Soft Engineering</option>
+        <option>2670	Intro Theory Comput</option>-->
+        <option value="2720">2720	Data Structures</option>
+        <option value="3030">3030	Computing, Ethics, and Society</option>
+        <option value="3360">3360	Data Science I</option>
+        <option value="4060">3360	Mobile Software Development</option>
+        <!--<option>4050	Soft Engineering</option>
         <option>4250	Cyber Security</option>
         <option>4300	Web Programming</option>
         <option>4370	Database Management</option>
@@ -333,27 +333,74 @@
         <option>8990	Research Seminar</option>
         <option>9000	Doctoral Research</option>
         <option>9005	Doc Grad Stu Sem</option>
-        <option>9300	Doct Dissertation</option>
+        <option>9300	Doct Dissertation</option>-->
+      </select>
+      <select id="AAEC" onchange="showClasses(this)">
+        <option value ="default" selected>Select a Course</option>
+        <option value="2580">2580	Appl Microeconomic Principles</option>
+        <option value="3690">3690 Agribusiness Finance</option>
       </select>
     </div>
 
     <img id="add-class-image" class="add-class-image" src="addaclass.png"/>
 
+    <table class="course-table" id="CSCI2720">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>M<br>TR</td><td>12:20 - 1:10<br>12:30 - 1:45</td><td>30</td><td>10</td><td>Meena</td><td>Chemistry 455</td><td><button id="2720-1" class="add-option" onclick="addCourse(this)">Register</button></td></tr>
+      <tr><td>M<br>TR</td><td>3:35 - 4:25<br>3:30 - 4:45</td><td>30</td><td>10</td><td>Meena</td><td>Chemistry 553 (M)<br>Forestry 1 304 (TR)</td><td><button class="add-option" id="2720-2" onclick="addCourse(this)">Register</button></td></tr>
+      <tr><td>M<br>TR</td><td>11:15 - 12:05<br>11:00 - 12:15</td><td>30</td><td>10</td><td>Pouriyeh</td><td>Hardman Hall 101</td><td><button class="add-option" id="2720-3" onclick="addCourse(this)">Register</button></td></tr>
+    </table>
+
+    <table class="course-table" id="CSCI3360">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>M<br>TR</td><td>2:30 - 3:20<br>2:00 - 3:15</td><td>30</td><td>10</td><td>Quinn</td><td>Forestry 4 516 (M)<br>Ecology 201 (TR)</td><td><button class="add-option" id="3360-1" onclick="addCourse(this)">Register</button></td></tr>
+    </table>
+
+    <table class="course-table" id="CSCI3030">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>MW<br>M</td><td>8:00 - 8:50<br>9:05 - 9:55</td><td>30</td><td>10</td><td>Funk</td><td>Chemistry 400 (MW)<br>Boyd 201 (M)</td><td><button class="add-option" id="3030-1" onclick="addCourse(this)">Register</button></td></tr>
+    </table>
+
+    <table class="course-table" id="CSCI4060">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>TR<br>W</td><td>9:30 - 10:45<br>10:10 - 11:00</td><td>30</td><td>10</td><td>Kochut</td><td>Boyd 306</td><td><button class="add-option" id="4060-1" onclick="addCourse(this)">Register</button></td></tr>
+    </table>
+
+    <table class="course-table" id="AAEC2580">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>MWF</td><td>2:30 - 3:20</td><td>30</td><td>10</td><td>Smith</td><td>Conner Hall 104</td><td><button class="add-option" id="2580-1" onclick="addCourse(this)">Register</button></td></tr>
+    </table>
+
+    <table class="course-table" id="AAEC3690">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>MWF</td><td>2:30 - 3:20</td><td>30</td><td>10</td><td>Kostandini</td><td>Conner Hall 210</td><td><button class="add-option" id="3690-1" onclick="addCourse(this)">Register</button></td></tr>
+    </table>
+
+    <table class="course-table">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>MWF</td><td>10:10 - 11:00</td><td>30</td><td>10</td><td>Sara Wilson</td><td>Boyd 201</td><td><button class="add-option">Add Course</button></td></tr>
+    </table>
+
+    <table class="course-table">
+      <tr><th>Days</th><th>Time</th><th>Cap</th><th>Rem</th><th>Instructor</th><th>Location</th><th></th></tr>
+      <tr><td>MWF</td><td>10:10 - 11:00</td><td>30</td><td>10</td><td>Sara Wilson</td><td>Boyd 201</td><td><button class="add-option">Add Course</button></td></tr>
+    </table>
+
     <h2 class="schedule">My Schedule</h2>
-    <table>
-      <tr><th></th><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THUR</th><th>FRI</th><th>SAT</th></tr>
-      <tr><td class="time">8:00 AM</td><td></td><td></td><td class="class">CMLT 3245<br>8:00 - 9:00</td><td></td><td class="class">CMLT 3245<br>8:00 - 9:00</td><td></td><td></td></tr>
-      <tr><td class="time">9:00 AM</td><td></td><td></td><td class="class">NMIX 4310<br>9:30 - 10:45</td><td></td><td class="class">NMIX 4310<br>9:30 - 10:45</td><td></td><td></td></tr>
-      <tr><td class="time">10:00 AM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td class="time">11:00 AM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr id="myRow"><td class="time">12:00 PM</td><td></td><td></td><td class="class" id="myBtn">CSCI 4800<br>12:30 - 1:45</td><td class="class">CSCI 4800<br>12:20 - 1:10</td><td class="class">CSCI 4800<br>12:30 - 1:45</td><td></td><td></td></tr>
-      <tr><td class="time">1:00 PM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td class="time">2:00 PM</td><td></td><td></td><td class="class">CSCI 4370<br>2:00 - 3:15</td><td class="class">CSCI 4370<br>2:30 - 3:20</td><td class="class">CSCI 4370<br>2:00 - 3:15</td><td></td><td></td></tr>
-      <tr><td class="time">3:00 PM</td><td></td><td class="class">PEDB 1400<br>3:35 - 4:25</td><td></td><td class="class">PEDB 1400<br>3:35 - 4:25</td><td></td><td></td><td></td></tr>
-      <tr><td class="time">4:00 PM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td class="time">5:00 PM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td class="time">6:00 PM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td class="time">7:00 PM</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <table id="scheduleTable">
+      <tr><th></th><th>MON</th><th>TUE</th><th>WED</th><th>THUR</th><th>FRI</th></tr>
+      <tr><td class="time">8:00 AM</td><td></td><td class="class">CMLT 3245<br>8:00 - 9:00</td><td></td><td class="class">CMLT 3245<br>8:00 - 9:00</td><td></td></tr>
+      <tr><td class="time">9:00 AM</td><td></td><td class="class">NMIX 4310<br>9:30 - 10:45</td><td></td><td class="class">NMIX 4310<br>9:30 - 10:45</td><td></td></tr>
+      <tr><td class="time">10:00 AM</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="time">11:00 AM</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr id="myRow"><td class="time">12:00 PM</td><td></td><td class="class" id="modal1" onclick="openModal()">CSCI 4800<br>12:30 - 1:45</td><td class="class" id="modal2" onclick="openModal()">CSCI 4800<br>12:20 - 1:10</td><td class="class" id="modal3" onclick="openModal()">CSCI 4800<br>12:30 - 1:45</td><td></td></tr>
+      <tr><td class="time">1:00 PM</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="time">2:00 PM</td><td></td><td class="class">CSCI 4370<br>2:00 - 3:15</td><td class="class">CSCI 4370<br>2:30 - 3:20</td><td class="class">CSCI 4370<br>2:00 - 3:15</td><td></td></tr>
+      <tr><td class="time">3:00 PM</td><td class="class">PEDB 1400<br>3:35 - 4:25</td><td id="drop-cell"></td><td class="class">PEDB 1400<br>3:35 - 4:25</td><td></td><td></td></tr>
+      <tr><td class="time">4:00 PM</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="time">5:00 PM</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="time">6:00 PM</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="time">7:00 PM</td><td></td><td></td><td></td><td></td><td></td></tr>
     </table>
 
     <div id="detail" class="modal">
@@ -379,6 +426,8 @@
         <span class="close">&times;</span>
       </div>
     </div>
+
+    <p class="help">Click any course in the schedule to view more information or drop the course.</p>
 
     <script src="script.js"></script>
     <script src="drop.js"></script>
